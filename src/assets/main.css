@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #202222;
+  --color-second: #191A1A;
+  --color-theme: #3CB371;
+  --color-border: #3C3E3F;
+  --color-white: #8C9090;
+  --font-display: "depature", "fusion", "sans-serif";
+  --animate-circle: circle 0.75s linear infinite;
+
+  @keyframes circle {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes fadein {
+    from {
+      opacity: 0;
+      transform: translateY(2vh);
+  
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+}
+
+@font-face {
+  font-family: "fusion";
+  font-style: normal;
+  font-weight: 200 700;
+  font-display: swap;
+  src: url("fusion-pixel.woff2") format('woff2');
+}
+
+@font-face {
+  font-family: "depature";
+  font-style: normal;
+  font-weight: 200 700;
+  font-display: swap;
+  src: url("DepartureMono-Regular.woff2") format('woff2');
+}
