@@ -9,16 +9,15 @@ const props = defineProps({
 </script>
 
 <template>
-    <div class="result flex items-center text-white bg-second w-[98%] h-[30%] my-1 rounded-md border-border border-1 font-display">
-        <div class="avatar w-[10%] aspect-square ml-[3%] rounded-full bg-gradient-to-b from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% border-4 border-border">
-            <img :src="item.avatar_url" alt="" srcset="" class="rounded-full">
+    <div class="result flex items-center text-white bg-second w-[98%] h-[30%] flex-shrink-0 my-1 rounded-md border-border border-1 font-display">
+        <div class="avatar flex w-[10%] aspect-square ml-[3%]  rounded-full bg-gradient-to-b from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% border-4 border-border">
+            <img :src="item.avatar_url" alt="owner_avatar" class="rounded-full">
         </div>
-        <div class="info flex flex-col text-theme w-[75%] ml-[2%] h-full">
-            <div class="repo mx-2 mt-2 h-[70%] flex flex-col justify-top">
-                <div>
+        <div class="info flex flex-col text-theme w-[75%] ml-[2%] h-auto">
+            <div class="repo mx-2 mt-2 h-[90%] flex flex-col justify-top">
                     <div class="title text-[1.8vmin] w-full h-[40%]"><a :href="item.clone_url" target="_blank">{{ item.reponame }}</a></div>
-                    <div class="desc w-full h-[60%] text-wrap line-clamp-2 text-white text-[1.2vmin] mt-0.5">{{ item.desc }}</div>
-                </div>
+                    <div class="desc w-full h-full text-wrap line-clamp-2 text-white text-[1.2vmin] mt-0.5" v-if="item.desc != null">{{ item.desc }}</div>
+                    <div class="desc w-full h-full text-wrap line-clamp-2 text-white text-[1.2vmin] mt-0.5" v-else>Woops...it seems no description is provided by the repo owner.</div>
             </div>
             <div class="stats flex mx-2 text-[1.4vmin] h-[30%] items-center">
                 <svg class="starlogo text-[#40E0D0]" aria-label="stars" role="img" height="80%" fill="currentColor" viewBox="0 0 16 16" version="1.1" width="3%"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"></path></svg>

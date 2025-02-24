@@ -104,6 +104,7 @@ const fetchData = async () => {
     </div>
     <div id="results" class=" overflow-scroll scrollbar-color-[#3CB371] flex flex-col w-[80vmin] h-[50%] justify-top items-center py-1 my-2" style="scrollbar-color: transparent transparent; overflow-x: hidden;">
       <Result v-for="each in data" :key="each.reponame" :item="each"/>
+      <Result v-for="each in data" :key="each.reponame" :item="each"/>
     </div>
   </div>
 </template>
