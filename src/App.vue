@@ -79,7 +79,7 @@ const fetchData = async () => {
       </form>
       <div id="control" class=" w-full h-[25%] mt-[0.5%] px-2 text-white font-display text-[1.3vmin] flex justify-center items-center ">
         <div id="settings" class="w-[90%] flex items-center h-full">
-          <button id="Sync" class="btn cursor-pointer bg-second h-[90%] w-[12%] flex items-center justify-center text-center rounded-lg hover:bg-primary transition duration-200 delay-50 ">
+          <button id="Sync" class="btn cursor-pointer bg-second h-[90%] w-[12%] flex items-center justify-center text-center rounded-lg hover:bg-primary transition delay-50 duration-300 ease-in-out">
             <svg fill="none" height="24" viewBox="0 0 24 24" width="24"
               xmlns="http://www.w3.org/2000/svg">
               <path
